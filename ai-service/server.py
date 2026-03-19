@@ -9,12 +9,8 @@ from services.detector import PestDetector
 
 app = FastAPI(title="Rice Pest Detection API")
 
-<<<<<<< HEAD
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-=======
-client = genai.Client(api_key=)
->>>>>>> c9f94b57c81bad7df56b2329cce51b0c2431928f
 
 detector = PestDetector(
     pt_path="runs/detect/train/weights/best.pt",
