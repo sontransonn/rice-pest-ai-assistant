@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F8F9FA">
+    android:background="#F8F9FA"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="#2E7D32"
-        android:elevation="4dp"
+        android:elevation="6dp"
         android:paddingHorizontal="16dp">
 
         <ImageView
@@ -21,14 +21,32 @@
             android:src="@android:drawable/ic_menu_info_details"
             app:tint="@android:color/white" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="CẨM NANG SÂU HẠI"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/ivBack"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cẩm Nang Sâu Hại"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Một số loài dịch hại phổ biến"
+                android:textColor="#E0E0E0"
+                android:textSize="11sp"
+                android:textStyle="normal" />
+        </LinearLayout>
 
         <ImageView
             android:layout_width="28dp"
@@ -48,16 +66,16 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
             app:cardCornerRadius="25dp"
-            app:cardElevation="3dp"
-            android:layout_marginBottom="16dp">
+            app:cardElevation="3dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -80,7 +98,10 @@
             android:id="@+id/rvLibrary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
             android:scrollbars="vertical" />
+
     </LinearLayout>
 
 </LinearLayout>

@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bác Sĩ Cây Trồng AI"
+                android:text="Bác Sĩ Tư Vấn AI"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="15sp" />

@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab_camera);
 
         if (savedInstanceState == null) {
-            loadFragment(new DetectFragment());
+            loadFragment(new HomeFragment());
+            bottomNav.setSelectedItemId(R.id.nav_home);
         }
 
         bottomNav.setOnItemSelectedListener(item -> {

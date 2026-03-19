@@ -33,12 +33,12 @@ public class LibraryFragment extends Fragment {
 
         // 1. Tạo dữ liệu 6 loài sâu
         pestList = new ArrayList<>();
-        pestList.add(new Pest("Rầy nâu", "Brown-planthopper", android.R.drawable.ic_menu_gallery));
-        pestList.add(new Pest("Rầy xanh đuôi đen", "Green-leafhopper", android.R.drawable.ic_menu_gallery));
-        pestList.add(new Pest("Sâu cuốn lá nhỏ", "Leaf-folder", android.R.drawable.ic_menu_gallery));
-        pestList.add(new Pest("Bọ xít dài", "Rice-bug", android.R.drawable.ic_menu_gallery));
-        pestList.add(new Pest("Sâu đục thân", "Stem-borer", android.R.drawable.ic_menu_gallery));
-        pestList.add(new Pest("Ruồi đục lá", "Whorl-maggot", android.R.drawable.ic_menu_gallery));
+        pestList.add(new Pest("Rầy nâu", "Brown-planthopper", R.drawable.ray_nau));
+        pestList.add(new Pest("Rầy xanh đuôi đen", "Green-leafhopper", R.drawable.ray_xanh_duoi_den));
+        pestList.add(new Pest("Sâu cuốn lá nhỏ", "Leaf-folder", R.drawable.sau_cuon_la_nho));
+        pestList.add(new Pest("Bọ xít dài", "Rice-bug", R.drawable.bo_xit_dai));
+        pestList.add(new Pest("Sâu đục thân", "Stem-borer", R.drawable.sau_duc_than));
+        pestList.add(new Pest("Sâu đục nõn", "Whorl-maggot", R.drawable.ruoi_duc_la));
 
         adapter = new PestAdapter(pestList, pest -> {
             // Xử lý khi ấn vào item

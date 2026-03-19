@@ -1,14 +1,16 @@
-from fastapi import FastAPI, File, UploadFile, Body
-import cv2
+import cv2, os
 import numpy as np
 
+from fastapi import FastAPI, File, UploadFile, Body
+from dotenv import load_dotenv
 from google import genai
 from services.preprocessor import preprocess_image
 from services.detector import PestDetector
 
 app = FastAPI(title="Rice Pest Detection API")
 
-client = genai.Client(api_key="AIzaSyC0eeWCd2SWs2eeBAHxwPGMMpncEWANdww")
+load_dotenv()
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 detector = PestDetector(
     pt_path="runs/detect/train/weights/best.pt",
