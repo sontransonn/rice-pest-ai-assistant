@@ -1,3 +1,9 @@
 ultralytics
 opencv-python
 matplotlib
+pandas
+tqdm
+fastapi
+uvicorn
+python-multipart
+google-genai
